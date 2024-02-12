@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'idea'
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.1.0'
     id 'org.hibernate.orm' version '6.4.4.Final'
@@ -7,6 +8,13 @@ plugins {
 
 group = 'com.tddninja'
 version = '1.0-SNAPSHOT'
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
 
 repositories {
     mavenCentral()
